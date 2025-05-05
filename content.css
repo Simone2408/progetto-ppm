@@ -1,0 +1,894 @@
+/* -------------------------------------------------- */
+/* MAIN CONTENT */
+.main-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px; /* Aumentato il padding laterale da 16px a 32px */
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Telegraph-style section dividers */
+.section-divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 16px 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+.section-divider.thick {
+  height: 1px;
+  background-color: #e0e0e0;
+  box-shadow: none;
+}
+
+.section-divider.dashed {
+  background: repeating-linear-gradient(to right, #f0f0f0, #f0f0f0 6px, transparent 6px, transparent 12px);
+}
+
+/* Telegraph-style vertical dividers */
+.vertical-divider {
+  width: 1px;
+  background-color: #e6e6e6;
+  margin: 0 16px;
+  align-self: stretch;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.vertical-divider.thick {
+  width: 2px;
+  background-color: #000;
+  box-shadow: none;
+}
+
+.vertical-divider.dashed {
+  background: repeating-linear-gradient(to bottom, #e6e6e6, #e6e6e6 6px, transparent 6px, transparent 12px);
+}
+
+/* Colonne con divisori verticali in stile Telegraph */
+.column-layout {
+  display: flex;
+  gap: 0;
+  margin: 24px 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 24px 0;
+}
+
+.column-layout .column {
+  flex: 1;
+  padding: 0 16px;
+  position: relative;
+}
+
+.column-layout .column:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.telegraph-section {
+  margin: 32px 0;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.live-badge {
+  background-color: #c00;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.live-badge.small {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.hero-title {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.hero-points {
+  margin-top: 16px;
+}
+
+.hero-points li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+
+
+
+.hero-right img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-caption {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Under-Hero Links */
+.under-hero-links {
+  display: flex;
+  border: 1px solid #ddd;
+  margin-bottom: 24px;
+}
+
+.under-hero-links a {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-right: 1px solid #ddd;
+  text-align: center;
+}
+
+.under-hero-links a:last-child {
+  border-right: none;
+}
+
+.under-hero-links a:hover {
+  background-color: #f9f9f9;
+}
+
+/* Articles Grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.article-item {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.article-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Separatori per tutti gli articoli nella colonna di sinistra */
+.col-lg-8 .card, 
+.col-lg-8 .article-item, 
+.col-lg-8 section > div {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.col-lg-8 .card:last-child, 
+.col-lg-8 .article-item:last-child, 
+.col-lg-8 section > div:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Separatore per le sezioni principali */
+.col-lg-8 > section {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.col-lg-8 > section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.article-item:not(:last-child) {
+  position: relative;
+}
+
+.article-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-item h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.article-item img {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.article-author {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.article-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* -------------------------------------------------- */
+/* SIDEBAR */
+/* Colonna di destra */
+.main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-left: none; /* Rimuoviamo il bordo sinistro */
+  padding-left: 0;
+  margin-left: 0;
+  box-shadow: none;
+}
+
+/* Separatore tra colonna principale e colonna laterale */
+.col-lg-4 {
+  position: relative;
+  border-left: 1px solid #ddd !important;
+  padding-left: 20px !important;
+}
+
+/* Stile per i titoli delle sezioni nella colonna di destra */
+.the-daily-t {
+  color: #c00 !important;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.podcast-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.podcast-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.podcast-player {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.podcast-player img {
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  margin-right: 16px;
+}
+
+.podcast-controls {
+  display: flex;
+  align-items: center;
+}
+
+.play-button {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.podcast-timeline {
+  flex: 1;
+  height: 4px;
+  background-color: #ddd;
+  position: relative;
+  margin: 0 10px;
+}
+
+.podcast-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #000;
+  width: 20%;
+}
+
+.podcast-time {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Stile per gli autori */
+.author-name {
+  color: #c00 !important;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.author-article-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.live-qa {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/* Linea divisoria tra gli articoli */
+.article-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 24px 0;
+  width: 100%;
+}
+
+/* Stile per i podcast in evidenza */
+.podcast-section {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Stile per le card dei podcast */
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.card-body {
+  padding: 12px 0;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Stile per i pulsanti di ascolto */
+.btn-outline-dark {
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Stile per la sezione opinioni */
+.opinion-section {
+  gap: 16px;
+}
+
+.opinion-article {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.opinion-img {
+  width: 50px;
+  height: 50px;
+}
+
+.opinion-text h4 {
+  color: #000;
+  font-size: 14px;
+}
+
+/* Stile per la sezione autori */
+.author-section {
+  margin-top: 24px;
+}
+
+.author-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #c00;
+}
+
+.author-title {
+  font-size: 14px;
+  color: #000;
+}
+
+.opinion-article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: none;
+  padding-top: 12px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.opinion-article::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.opinion-article:last-child {
+  border-bottom: none;
+}
+
+.opinion-article:last-child::after {
+  display: none;
+}
+
+.opinion-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.opinion-text h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c00 !important;
+  margin-bottom: 4px;
+}
+
+.opinion-text p {
+  font-size: 14px;
+  color: #000;
+}
+
+/* -------------------------------------------------- */
+/* AD Banner */
+.ad-banner {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  padding: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Podcasts Section */
+.podcast-main {
+  margin: 40px 0;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.podcast-main h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.podcast-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.podcast-tags::-webkit-scrollbar {
+  display: none;
+}
+
+.podcast-tags button {
+  border: none;
+  background-color: #eee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+.podcast-tags .active {
+  background-color: black;
+  color: white;
+}
+
+.podcast-list {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.podcast-list::-webkit-scrollbar {
+  display: none;
+}
+
+.podcast-card {
+  min-width: 280px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px;
+  scroll-snap-align: start;
+}
+
+.podcast-card img {
+  border-radius: 4px;
+  height: auto;
+}
+
+.podcast-info {
+  padding: 8px 0;
+}
+
+.podcast-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.podcast-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.podcast-meta {
+  font-size: 12px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.listen-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.listen-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* Newsletter Section */
+.card .border-bottom.pb-2.mb-3.fw-bold {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 20px;
+  position: relative;
+  padding-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Sottolineatura rossa per il titolo NEWSLETTERS */
+.card .border-bottom.pb-2.mb-3.fw-bold:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+  height: 3px;
+  background-color: #ff0000 !important;
+  display: block;
+}
+
+/* Miglioramento del layout per la sezione newsletter */
+.card-body .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* Contenitore per il testo della newsletter */
+.card-body .d-flex > div:first-child {
+  flex: 1;
+  padding-right: 15px;
+  max-width: calc(100% - 95px); /* Riserva spazio per l'immagine e il margine */
+}
+
+/* Stile per le immagini nella sezione newsletter */
+.card-body .d-flex > div:last-child {
+  flex-shrink: 0;
+  width: 80px;
+}
+
+.card-body .d-flex > div:last-child img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card .h6.fw-bold {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000 !important;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.card .btn-primary {
+  background-color: #000000 !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 20px !important; /* Ridotto il padding verticale e orizzontale */
+  border-radius: 30px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  margin-top: 20px !important;
+  font-size: 14px !important; /* Ridotto la dimensione del font */
+  display: inline-block !important;
+  width: auto !important; /* Cambiato da 100% a auto */
+  text-align: center !important;
+  box-shadow: none !important;
+  text-transform: none !important; /* Assicurarsi che non sia in maiuscolo */
+  line-height: 1.5 !important; /* Aggiunto per migliorare l'allineamento verticale */
+  min-width: 100px !important; /* Aggiunto per garantire una larghezza minima */
+}
+
+
+/* Linea nera sotto la navbar */
+.navbar {
+  border-bottom: 3px solid #000 !important;
+}
+
+
+/* Oppure possiamo creare un elemento dedicato */
+.header-border {
+  height: 3px;
+  background-color: #000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Separatore verticale per la sezione hero */
+.hero-left {
+  position: relative;
+}
+
+.hero-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Separatori verticali per le sezioni affiancate */
+.section-with-divider {
+  position: relative;
+}
+
+.section-with-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Separatori verticali per la griglia di articoli */
+.articles-grid .article-item:nth-child(odd) {
+  position: relative;
+}
+
+.articles-grid .article-item:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Per la griglia di articoli in Bootstrap */
+.row .col-md-6:nth-child(odd) {
+  position: relative;
+}
+
+
+
+.opinion-item {
+  padding: 16px 0; /* Aumenta lo spazio verticale */
+  border-bottom: 1px solid #ddd; /* Aggiungi una linea divisoria */
+}
+
+.opinion-item:last-child {
+  border-bottom: none; /* Rimuovi la linea divisoria dall'ultimo elemento */
+}
+
+/* Separatori verticali per la sezione Under Hero Links */
+.d-flex.flex-column.flex-md-row.justify-content-between.py-2 a {
+  position: relative;
+  padding: 0 15px;
+}
+
+.d-flex.flex-column.flex-md-row.justify-content-between.py-2 a:first-child {
+  padding-left: 0;
+}
+
+.d-flex.flex-column.flex-md-row.justify-content-between.py-2 a:last-child {
+  padding-right: 0;
+}
+
+/* Separatori verticali in modalità desktop */
+@media (min-width: 768px) {
+  .d-flex.flex-column.flex-md-row.justify-content-between.py-2 a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #e6e6e6;
+  }
+}
+
+/* Separatori orizzontali in modalità mobile */
+@media (max-width: 767.98px) {
+  .d-flex.flex-column.flex-md-row.justify-content-between.py-2 a {
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .d-flex.flex-column.flex-md-row.justify-content-between.py-2 a:last-child {
+    border-bottom: none;
+  }
+  
+  /* Miglioramento della responsività del testo */
+  .d-flex.flex-column.flex-md-row.justify-content-between.py-2 a {
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}

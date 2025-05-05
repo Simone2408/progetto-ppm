@@ -1,0 +1,334 @@
+/* Stile per la sezione degli articoli salvati */
+.saved-articles-section {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.saved-articles-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.saved-articles-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 10px;
+  color: #333;
+}
+
+.view-all-link {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.category-btn {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.category-btn.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.category-btn:not(.active) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.account-info-container {
+  margin-bottom: 20px;
+}
+
+.account-info-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.account-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.create-account-btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: none;
+  line-height: 1.2;
+}
+
+.login-link1{
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.saved-articles-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.account-info-container {
+  flex: 0 0 250px;
+  margin-bottom: 0;
+}
+
+.saved-articles-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.article-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.article-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  color: #333;
+}
+
+.article-dimensions {
+  font-size: 12px;
+  color: #999;
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .saved-articles-container {
+    flex-direction: column;
+  }
+  
+  .account-info-container {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .saved-articles-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-articles-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .category-filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .saved-articles-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .account-actions {
+    flex-direction: column;
+  }
+}
+
+.saved-articles-message {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.saved-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.saved-article-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.saved-article-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.saved-article-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.saved-article-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.saved-article-button {
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saved-article-button.primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.saved-article-button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .saved-articles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .saved-articles-categories {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .saved-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Stile per il messaggio di creazione account */
+.create-account-message {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Modifica per rendere la riga di articoli scorrevole orizzontalmente senza sovrapposizioni */
+.saved-articles-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  flex: 1;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding-bottom: 10px;
+}
+
+.saved-articles-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.article-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  flex: 0 0 auto;
+  width: 220px;
+  margin-right: 15px; /* Aggiungi margine a destra per evitare sovrapposizioni */
+}
+
+.article-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  color: #333;
+  white-space: normal; /* Permette al testo di andare a capo */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 righe */
+  -webkit-box-orient: vertical;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .saved-articles-row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-articles-row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-card {
+    width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-card {
+    width: 160px;
+  }
+}
